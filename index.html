@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DesarrolladoresWeb</title>
+    <title>NovaEstudio</title>
+    <link rel="icon" type="image/png" sizes="128x128" href="iconoo.png">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -61,7 +62,7 @@
             z-index: -1;
         }
 
-           header {
+        header {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -103,6 +104,7 @@ header::before {
             font-size: 1.8rem;
             color: var(--text-light);
             text-shadow: 0 0 10px rgba(255,255,255,0.5);
+            animation: float 6s ease-in-out infinite;
         }
 
         section {
@@ -126,7 +128,8 @@ header::before {
 
         #about p {
             font-size: 1.2rem;
-            color: var(--text-dark);
+            color: var(--text-light);
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
             max-width: 800px;
             margin: 0 auto;
         }
@@ -289,20 +292,75 @@ header::before {
                 font-size: 2rem;
             }
         }
+        /* Primero agregamos los estilos para la navegación */
+.nav-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(11, 11, 31, 0.9); /* Usando el color space-dark con transparencia */
+    padding: 1rem 2rem;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.nav-header a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-header a:hover {
+    background: linear-gradient(45deg, var(--accent-purple), var(--accent-blue));
+    transform: translateY(-2px);
+}
+
+/* Ajustamos el header para que no se oculte bajo la navegación */
+header {
+    padding-top: 5rem; /* Añadimos padding extra arriba */
+}
+
+/* Agregamos media query para responsividad */
+@media (max-width: 768px) {
+    .nav-header {
+        padding: 1rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .nav-header a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
     </style>
 </head>
 <body>
+    <nav class="nav-header">
+        <a href="#about">Sobre Nosotros</a>
+        <a href="#projects">Paquetes</a>
+        <a href="#contact">Contacto</a>
+    </nav>
     <header>
-        <h1>Haciendo tus sueños realidad</h1>
-        <p>Desarrolladores Web</p>
+        
+        <a href=""></a>
+        
+        <h1>CONSTRUYE TU FUTURO DIGITAL CON NOSOTROS.</h1>
+        <p>Diseñamos Tu Presencia Digital Para Que Tu Solo Te Preocupes En Crecer.</p>
     </header>
 
     <section id="about">
         <h2>Sobre Nosotros</h2>
-        <p>Somos Una Empresa Dedicada A Desarrollar Paginas Web Para Negocios o Cualquier Necesidad</p>
+        <p>Somos un equipo de programadores apasionados por la tecnología y el diseño, comprometidos con transformar ideas en experiencias digitales únicas. Nos especializamos en crear páginas web personalizadas que no solo se ven bien, sino que funcionan de manera eficiente y optimizada para cada necesidad. Desde pequeños proyectos hasta soluciones más complejas, nuestro objetivo es construir sitios web que ayuden a nuestros clientes a destacarse en línea, mejorar su presencia digital y alcanzar sus metas comerciales. Con un enfoque colaborativo y una constante actualización de nuestras habilidades, trabajamos de la mano contigo para que tu página web no solo sea una herramienta, sino una verdadera extensión de tu visión.</p>
     </section>
-
-
 
 
    
@@ -352,7 +410,7 @@ header::before {
     <section id="contact">
         <h2>Contacto</h2>
         <p>¿Tienes una idea para pagina Web? ¡Trabajemos juntos para hacerla realidad!</p>
-        <a href="https://wa.me/+525648606627">Iniciar Conversacion</a>
+        <a href="https://wa.me/+525648606627">Iniciar Conversacion con el striper premium</a>
     </section>
 
     <footer>
