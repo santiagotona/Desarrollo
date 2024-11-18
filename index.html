@@ -134,6 +134,50 @@ header::before {
             margin: 0 auto;
         }
 
+        /*     Referencias     */
+
+        .reference-item {
+        background: var(--space-medium);
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        transition: all 0.4s ease;
+        position: relative;
+    }
+
+    .reference-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 45px rgba(157,78,221,0.2);
+    }
+
+    .reference-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-bottom: 2px solid var(--accent-purple);
+        transition: transform 0.3s ease;
+    }
+
+    .reference-item:hover .reference-image {
+        transform: scale(1.05);
+    }
+
+    .reference-item a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+
+    .reference-item ul {
+        list-style: none;
+        padding: 1.5rem;
+        color: var(--text-light);
+        font-family: 'Rajdhani', sans-serif;
+    }
+
+        /* Fin de las Referencias */
+
         .project-list {
             display: grid;
             gap: 2rem;
@@ -363,7 +407,31 @@ header {
     </section>
 
 
-   
+    
+
+    <section id="projects">
+        <h2>Referencias</h2>
+        <div class="project-list">
+          <div class="project-item">
+            <img src="captura.png" alt="Proyecto 1">
+            <h3>Pagina Web de Abogados</h3>
+            <p>Esta Pagina web fue creada para usarse para abogados</p>
+            <a href="https://santiagotona.github.io/abogadro" target="_blank">Ver proyecto</a>
+          </div>
+          <div class="project-item">
+            <img src="captura2.png" alt="Proyecto 2">
+            <h3>Servicios de Catering</h3>
+            <p>Esta Pagina Web Fue Creada Para Servicios de Catering</p>
+            <a href="https://santiagotona.github.io/catering/" target="_blank">Ver proyecto</a>
+          </div>
+          <div class="project-item">
+            <img src="captura3.png" alt="Proyecto 2">
+            <h3>Curso Marketing Digital</h3>
+            <p>Esta Pagina fue creada para usarse en un curso</p>
+            <a href="https://santiagotona.github.io/videos/" target="_blank">Ver proyecto</a>
+          </div>
+        </div>
+      </section>
    
     <section id="projects">
         <h2>Paquetes</h2>
